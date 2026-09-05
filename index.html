@@ -1,0 +1,680 @@
+<!DOCTYPE html><html class="scroll-smooth dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>CYBERCITY OPUS — Road No. 45, Jubilee Hills</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#0B0B0B",
+            "surface-dim": "#111111",
+            "surface-high": "#161616",
+            "surface-card": "#161616",
+            "surface-elevated": "#1C1C1C",
+            "primary": "#F7F5F0",
+            "on-dark": "#F7F5F0",
+            "secondary": "#BDBAB4",
+            "muted": "#7A7873",
+            "accent": "#D4AF37",
+            "accent-champagne": "#E5C89C",
+            "border-hairline": "#242424",
+            "border-subtle": "#2E2E2E"
+          },
+          fontFamily: {
+            cinzel: ["Cinzel", "serif"],
+            serif: ["Cinzel", "Playfair Display", "serif"],
+            editorial: ["Playfair Display", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #0B0B0B;
+        color: #F7F5F0;
+        -webkit-font-smoothing: antialiased;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .gallery-img {
+      filter: grayscale(35%) contrast(105%);
+      transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-img:hover, .gallery-img:active {
+      filter: grayscale(0%) contrast(100%);
+      transform: scale(1.02);
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(11,11,11,0.55) 0%, rgba(11,11,11,0.2) 35%, rgba(11,11,11,0.8) 75%, #0B0B0B 100%);
+    }
+  </style>
+</head>
+<body class="bg-surface text-primary font-sans antialiased flex flex-col min-h-screen">
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-40 bg-[#0B0B0B]/85 backdrop-blur-xl border-b border-border-hairline pt-safe"><div class="h-16 px-4 sm:px-5 flex items-center justify-between gap-2">
+<a class="flex flex-col tracking-tight group min-w-0 flex-shrink" href="#">
+<span class="font-cinzel text-[13px] sm:text-[16px] font-semibold tracking-[0.16em] sm:tracking-[0.24em] uppercase text-primary truncate">Cybercity Opus</span>
+<span class="text-[8.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.28em] text-secondary/70 uppercase font-light truncate">Road No. 45 · Jubilee Hills</span>
+</a>
+<div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+<img alt="KONU Real Estate Advisory" class="h-7 sm:h-9 w-auto object-contain mr-1 sm:mr-2" src="public/konu-logo.png">
+<a class="h-8 sm:h-9 px-3 sm:px-5 inline-flex items-center justify-center bg-[#F7F5F0] text-[#0B0B0B] text-[9.5px] sm:text-[11px] font-medium tracking-[0.14em] sm:tracking-[0.2em] uppercase hover:bg-white active:scale-95 transition-all whitespace-nowrap" href="#section-07">
+          Enquire Now
+        </a>
+<button aria-label="Menu" class="w-9 h-9 flex items-center justify-center text-primary/80 hover:text-primary transition-colors flex-shrink-0" id="menu-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div></header>
+<!-- MOBILE OVERLAY MENU -->
+<div class="fixed inset-0 bg-[#0B0B0B]/98 backdrop-blur-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 pt-safe text-white justify-between border-l border-border-hairline" id="mobile-menu">
+<div class="flex items-center justify-between border-b border-border-hairline pb-5">
+<div class="flex items-center gap-3">
+<img alt="KONU" class="h-7 w-auto object-contain" src="public/konu-logo.png">
+<span class="font-cinzel tracking-[0.25em] text-sm uppercase text-[#F7F5F0]">Cybercity Opus</span>
+</div>
+<button class="text-white/80 hover:text-white p-2" id="close-menu-btn">
+<span class="material-symbols-outlined text-[26px]">close</span>
+</button>
+</div>
+<div class="flex flex-col space-y-6 text-lg font-cinzel tracking-widest uppercase">
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#location">01 / The Location</a>
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#architecture">02 / Architectural Scale</a>
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#spaces">03 / Office Plates</a>
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#environmental-deck">04 / Environmental Deck</a>
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#specifications">05 / Technical Specs</a>
+<a class="menu-link hover:text-accent-champagne transition-colors" href="#floorplans">06 / Floor Topologies</a>
+<a class="menu-link text-accent-champagne" href="#section-07">07 / Reserve Private Briefing</a></div>
+<div class="border-t border-border-hairline pt-5 text-xs text-secondary/60 tracking-widest uppercase flex flex-col gap-1.5 font-light">
+<span class="">TS RERA REG: P02500004589</span>
+<span class="">Exclusive Mandate — KONU Advisory</span>
+</div>
+</div>
+<main class="flex-1 w-full pt-16">
+<!-- 1. HERO SECTION: ELEVATED ARCHITECTURAL EDITORIAL DARK HERO -->
+<section class="relative w-full bg-[#0B0B0B] text-primary flex flex-col justify-end min-h-[94vh] sm:min-h-[88vh] overflow-hidden">
+<!-- Building Elevation Backdrop: Clearly Visible, Crisp Architectural Presence -->
+<div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+<img alt="Cybercity Opus Architectural Elevation" class="w-full h-full object-cover object-top opacity-70 filter contrast-110 brightness-95 scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqceV6O5HOnOaPVzk0aPF8NWN9G0CIlM_BDYukoJK0BiUFzfNfJrdrgFEU20OtuY-tSDjAxamBz8vHY2cF1eZsb4oCZYjFb7BVsdR-5XFicPWG8IM8Ifa3zMavSTmKA1fyX9H8uyxV_AsNZ3m0JRYnOw0r8s-Azwip0ApuDX9o3pM4tvS0vo1IVwqOoGf10O2kttzzglcNoTxJvoOCjQsoJnfi5xtz2AemVw5lM-h3Fzlqb6DrdQZZxRldBtIbuGWUVKE">
+<!-- Precision Dark Luxury Vignette Gradient -->
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 bg-radial-gradient from-transparent via-[#0B0B0B]/30 to-[#0B0B0B]/90"></div>
+</div>
+<!-- Monumental Editorial Foreground Content -->
+<div class="relative z-10 px-6 pt-28 pb-14 sm:pb-16 flex flex-col justify-end max-w-xl mx-auto w-full">
+<!-- Micro Kicker -->
+<div class="flex items-center space-x-2 text-[10px] uppercase tracking-[0.34em] text-accent-champagne/90 mb-4 font-light">
+<span class="">Commercial Landmark</span>
+<span class="text-white/30">·</span>
+<span class="">Road No. 45, Jubilee Hills</span>
+</div>
+<!-- Grand Refined Headline -->
+<div class="flex flex-col space-y-1 mb-5">
+<h1 class="font-cinzel text-[34px] sm:text-[56px] leading-[1.08] sm:leading-[1.05] tracking-[0.12em] sm:tracking-[0.14em] font-semibold text-[#F7F5F0] uppercase">
+      Opus<br><span class="font-light tracking-[0.14em] sm:tracking-[0.18em] text-[#E5C89C]">Cybercity</span>
+</h1>
+</div>
+<!-- Editorial Subtitle -->
+<p class="font-editorial text-[17px] sm:text-[19px] leading-relaxed text-[#ECE8DF] font-light mb-3 max-w-md">
+    An iconic commercial presence rising on Road No. 45, Jubilee Hills.
+  </p>
+<p class="font-sans text-[13px] leading-relaxed text-secondary font-light max-w-md mb-8">
+    Grade-A corporate office plates and prime high-street retail anchored along Hyderabad’s most prestigious arterial micro-market.
+  </p>
+<!-- High-Contrast Luxury Primary CTA -->
+<div class="w-full mb-8">
+<a class="w-full h-13 py-3.5 bg-[#F7F5F0] text-[#0B0B0B] hover:bg-white flex items-center justify-center font-medium text-[11px] uppercase tracking-[0.24em] active:scale-[0.99] transition-all shadow-2xl" href="#section-07">
+      Enquire Now
+    </a>
+</div>
+<!-- Subtle Project Metadata Ticker Band -->
+<div class="pt-5 border-t border-border-hairline flex items-center justify-between text-[9px] uppercase tracking-[0.24em] text-secondary/80 font-light"><a class="hover:text-accent-champagne transition-colors" href="#spaces">Grade-A Offices</a><span class="text-white/20">|</span><a class="hover:text-accent-champagne transition-colors" href="#architecture">G+1 Retail</a><span class="text-white/20">|</span><a class="hover:text-accent-champagne transition-colors" href="#environmental-deck">Biophilic Deck</a><span class="text-white/20">|</span><a class="hover:text-accent-champagne transition-colors" href="#specifications">2+5 Parking</a></div>
+</div>
+</section>
+<!-- 2. SECTION 2: LOCATION / ADDRESS (DARK THEME) -->
+<section class="w-full px-6 py-20 bg-surface border-b border-border-hairline" id="location">
+<div class="max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">01 / The Location</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-5 tracking-wide">
+          “An address your business is judged by.”
+        </h2>
+<p class="font-sans text-[14px] leading-relaxed text-secondary font-light mb-8">
+          Directly positioned along the elite frontage of Road No. 45, Jubilee Hills. Engineered to deliver effortless vehicular access directly bridging the prestigious Jubilee Hills civic core with Madhapur, Durgam Cheruvu, and the Hitech City financial corridor.
+        </p>
+<!-- Satellite Masterplan Container with Dark Frame -->
+<div class="w-full bg-[#161616] overflow-hidden mb-4 border border-border-subtle cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuAREQ_mFXBRua9_AYSGhOK7gik73HljNZvNtqWWvinqscQBAmeGvUdGHhq97bue1KKjpTxQIiPlfiyBdNMHFbLG0Z20cvN7vq1Sq0PLrMQs_KylqDQWQNDKYENL1HzmQxVl2oZexZudRvqcIkV9tobeIbUqzEjlDjx8vf5sEhBt1pTldNZ5QDkbJjsg3Hdur6R8DPnNqv1JOeydjnZb0QCWJnvF5CtIVJqtOYwxDw8_1u-12LMJaAvzgb-75vGtptHJGps', 'Direct 120-Ft Road Arterial Frontage — Road No. 45 Jubilee Hills')">
+<img alt="Opus Road No. 45 Direct 120-Ft Masterplan Satellite Map" class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZY2iimr9GkeLliG8Ql5Q6t7D0iqn5Z64xXgV3hNjN6c8irwOEnZR5SKw9NOAt5rsxDNtJsliTYb3xIuV1pi34zKGNlACKxAbew4k1xxKHfv0A2617DTLSjRpnvT7703_LI3p9Fqp4h4tduUbH-75jgKSp7KBZ1YgzBNBD8X-hWDRc-FLdD1KbWMnLAjlwLV8Z1wm8JMxq4JXR1aWOkXgRVOiDXEfwDs6GkCjNhu2RBP5Lq3H_DFejA7HacYEc-qjGVx0">
+</div>
+<div class="flex items-center justify-between text-[11px] tracking-wide text-secondary pb-4 border-b border-border-hairline font-light">
+<span class="uppercase tracking-[0.18em]">Direct 120-Ft Arterial Frontage</span>
+<span class="font-serif text-accent-champagne">Jubilee Hills</span>
+</div>
+<a class="inline-flex items-center gap-2 pt-5 text-[#F7F5F0] text-[11px] uppercase tracking-[0.22em] font-medium hover:text-accent-champagne transition-colors" href="#macro-container" onclick="const c = document.getElementById('macro-container'); if (c) { c.classList.remove('hidden'); c.scrollIntoView({ behavior: 'smooth' }); }"><span class="">Explore Location Overview</span><span class="material-symbols-outlined text-[16px]">arrow_downward</span></a>
+<!-- Macro context drawer -->
+<div class="hidden mt-6 pt-6 border-t border-border-hairline" id="macro-container">
+<img alt="Macro Connectivity Map" class="w-full h-auto object-contain mb-2 border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxhmVlQKjwoFTwt0R-db3FiUSsl6hR-l96HsXz6ESYLdxVcuN2ccYpX_3x-UZayJF5rQ78mn-1_0l-uVZSUiFx3f-RD1YVnR6aSJoJ7XKKQPB5tH18p0c1CDN2cBuu55XtHKZXrwJouMZhLeq342nha5CcxoA8nyayAkLLc3yciOPtyl8SQhcRXISv_PHDbKwcSG59Yqtk82HYlid8GCKF6aDG4MSAXvWHKSq8E98Ncy8nafwgGSHJDTqmIhaA_aUip2I">
+<p class="text-[11px] text-secondary uppercase tracking-widest pt-1 font-light">Macro connectivity network · KBR Park &amp; Hitech City</p>
+</div>
+</div>
+</section>
+<!-- 3. SECTION 3: ARCHITECTURAL SCALE & STATS -->
+<section class="w-full bg-surface-dim py-20 border-b border-border-hairline" id="architecture">
+<div class="px-6 max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">02 / Architecture &amp; Scale</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-8 tracking-wide">
+          Sculptural presence engineered for Jubilee Hills.
+        </h2>
+<!-- Primary Facade Elevation Rendering -->
+<div class="w-full bg-[#161616] overflow-hidden mb-12 border border-border-subtle">
+<img alt="Cybercity Opus Facade Perspective" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7A-eoMtO9OoHF0CMY00Gcq15QeheAaJf-AUqbjFbNGrgfLSrp0yxUxg8ytcTm2WhWVl-QvnEKBgSu23vbXtzyh24SX10iv3aX8bm0mUuEZ4wL6AbQ7sObfNtvGj7i9sqc2onZxVxsCqebo8nd3410_9L5hHInobbQBihwbH_syBosrBQkoE4dShF_pnU-n2Wla1XdDeQDUoIqCEsTK6RBGkGvG4tvuY1FJvCHtKwzDpZfmrG3_BWyBKmaKHA3e1x45W4">
+</div>
+<!-- Oversized Ivory Metrics & Thin Charcoal Dividers -->
+<div class="flex flex-col divide-y divide-border-hairline">
+<div class="py-5 flex items-baseline justify-between">
+<span class="font-cinzel text-[38px] sm:text-[44px] font-normal tracking-tight text-[#F7F5F0]">G+1</span>
+<span class="text-[11px] uppercase tracking-[0.2em] text-secondary text-right font-light">Prime High-Street Retail</span>
+</div>
+<div class="py-5 flex items-baseline justify-between">
+<span class="font-cinzel text-[38px] sm:text-[44px] font-normal tracking-tight text-[#F7F5F0]">A+</span>
+<span class="text-[11px] uppercase tracking-[0.2em] text-secondary text-right font-light">Grade-A Office Volumes</span>
+</div>
+<div class="py-5 flex items-baseline justify-between">
+<span class="font-cinzel text-[38px] sm:text-[44px] font-normal tracking-tight text-[#F7F5F0]">DECK</span>
+<span class="text-[11px] uppercase tracking-[0.2em] text-secondary text-right font-light">Biophilic Podium Sanctuary</span>
+</div>
+<div class="py-5 flex items-baseline justify-between">
+<span class="font-cinzel text-[38px] sm:text-[44px] font-normal tracking-tight text-[#F7F5F0]">2+5</span>
+<span class="text-[11px] uppercase tracking-[0.2em] text-secondary text-right font-light">Basement &amp; Stilt Parking</span>
+</div>
+<div class="py-5 flex items-baseline justify-between">
+<span class="font-cinzel text-[38px] sm:text-[44px] font-normal tracking-tight text-[#F7F5F0]">3.0m</span>
+<span class="text-[11px] uppercase tracking-[0.2em] text-secondary text-right font-light">Clear Double-Height Lobby</span>
+</div>
+</div>
+<!-- Street Angle Elevation -->
+
+</div>
+</section>
+<!-- 4. SECTION 4: OFFICE SPATIAL FORMATS -->
+<section class="w-full px-6 py-20 bg-surface border-b border-border-hairline" id="spaces">
+<div class="max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">03 / Spatial Configurations</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-3 tracking-wide">
+          Office Spatial Formats
+        </h2>
+<p class="font-sans text-[14px] leading-relaxed text-secondary font-light mb-12">
+          Designed for flexible tenant requirements, from high-value boutique financial suites to corporate regional headquarters.
+        </p>
+<!-- Offering 1 -->
+<div class="pb-10 border-b border-border-hairline flex flex-col space-y-3">
+<div class="flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-secondary/70">
+<span class="">Configuration 01</span>
+<span class="text-accent-champagne/90">Subdivided Suites</span>
+</div>
+<div class="font-cinzel text-[28px] sm:text-[34px] text-[#F7F5F0] tracking-tight font-normal">
+            3,757 – 7,183 <span class="text-[13px] font-sans uppercase tracking-widest text-secondary font-light">Sq.Ft.</span>
+</div>
+<p class="font-sans text-[14px] text-secondary font-light leading-relaxed">
+            Optimized column-free spans, exceptional acoustic insulation, and full perimeter light intake. Purpose-built for private consultancies, venture offices, and high-net-worth firms.
+          </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.22em] text-[#F7F5F0] font-medium hover:text-accent-champagne transition-colors" href="#section-07">
+<span class="">Request Availability Matrix</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Offering 2 -->
+<div class="pt-10 flex flex-col space-y-3">
+<div class="flex items-center justify-between text-[10px] uppercase tracking-[0.24em] text-secondary/70">
+<span class="">Configuration 02</span>
+<span class="text-accent-champagne/90">Consolidated Full-Floors</span>
+</div>
+<div class="font-cinzel text-[28px] sm:text-[34px] text-[#F7F5F0] tracking-tight font-normal">
+            21,427 – 22,958 <span class="text-[13px] font-sans uppercase tracking-widest text-secondary font-light">Sq.Ft.</span>
+</div>
+<p class="font-sans text-[14px] text-secondary font-light leading-relaxed">
+            Whole-floor corporate floorplates featuring dedicated elevator vestibules, 360-degree panoramic vantage points over Jubilee Hills and KBR Park greenery, and scalable MEP infrastructure.
+          </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.22em] text-[#F7F5F0] font-medium hover:text-accent-champagne transition-colors" href="#section-07">
+<span class="">Request Full-Plate Allocation</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION 5: THE ENVIRONMENTAL DECK (CURATED LIGHTBOX GALLERY) -->
+<section class="w-full bg-surface-dim text-primary py-20 border-b border-border-hairline" id="environmental-deck">
+<div class="px-6 max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">04 / Biophilic Wellness</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-3 tracking-wide">
+          The Environmental Deck
+        </h2>
+<p class="font-sans text-[14px] leading-relaxed text-secondary font-light mb-8">
+          A dedicated landscaped amenity floor elevated between high-street retail and the corporate tower. Engineered with outdoor breakout pods, conversational cabanas, and shaded flora.
+        </p>
+<p class="text-[10px] uppercase tracking-[0.22em] text-secondary/60 mb-6 flex items-center gap-1.5 font-light">
+<span class="material-symbols-outlined text-[14px]">touch_app</span>
+          Tap image to inspect full architectural rendering
+        </p>
+<!-- Gallery Stack -->
+<div class="flex flex-col space-y-6">
+<!-- Image 14 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuAymi47HYmj3auTtClrE7uexR1HcjL7-DbhtMx2Y2s_NlPYCvXAbh-r8L0H5LCJ8nKv5yXRwM9AAHXYemhQklOtqsZEaHnzOei76_lOgc-YmpXeg1e2P9KIvbZ_QqFnvtOF4YV8KMCQNxYWJd9wB66w9hqDJAtYIfD4NADc__GaB_tkzLSpp0k2UaUQIJZvhVCsfC1rG-96j2XSh4WdB-_8Zw02vCHCQrboDLtnAdVELZs6yXI_GtIKfajZc4ieqAXl22s', 'Environmental Deck — Central Watercourse &amp; Lounge Pavilion')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Central Watercourse and Deck Lounge" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCNVeg8lSnJmExTzaROy0DpNb6Dt0KiBznZoVhrp9itO98Us6dMK-SOFPd9R4CJAa5chSVl7kBgt20u-QwimSdmEvl0w9LBy9RJw1Rlbz7YuY6MW4NRRdAu_-m8MmSAC63APagw8paUN1-SRdgMZqIOKtGwig2IcbUBKjFJ6JXYPMBACRnQZh7FXhfVAwtmoh_y-9bEBLuqWYxcwcutzm_wS4Zq6-xOEqGDf7GFO0G0I4qZ4nTgWgzP9tfRx8wlb7u-eI">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Central Water Feature &amp; Sculptural Deck</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+<!-- Image 15 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDSSoEUg2p9x5fspnJHBs1NR-tC8OyD6cF2-V8Lo7i6UKrikqLg5yRYf1C4xSEBWTMDnLTM9tG7kq5P1Iw8TKpmW34Tw0Aq-jsd8c4ZpCiFHOamxEuZ4wPeVY38GxPkQSnyCK03BCLzx95vtRj5X-lrZ3IJfAZxtZummU3kCMT7i3mxRUmweY6l7XvlvLoejRZMp5aDoAkplVN5UieQ2dRTGhtdrCnfSvjasR97ai9QRGSeRrKSM-T71qMiKzPoBRMjxW4', 'Environmental Deck — Open Air Co-Working &amp; Shaded Flora')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Open Air Co-Working Bench and Lush Planters" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfOq8ZTb-dgBGsMS7wIWPjTBKMqCkKt5vnkKIwFqY8ToNHs3IE7xQIJTnF1JDBjGjBCTMGRebuygFF_9PPW9wWdmBpC1y_VpTEwHncby765dzklmI1L7x1fHTSnbcrRd4N8L7Kg6gkED9iFe0o73naJycuBSg8rNdlXSMd5HvsE9zH70d9iY0DAhJB_wfNbXwhpakSt15bMThRfWhRr3sTFsjEWj2I1mkICtGP1BGbvoQBt5MIr_96yR8i4MEMBHq4EjY">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Executive Work Benches &amp; Planters</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+<!-- Image 16 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDyPZGrrJq6DKdeACQAABoaoLswR_7GGXgwDAjryd8hPHHwhTeovrf81eM6YL2bfMMIWG3VujaHDE3-rhZDCV5EZsQJrlgQKAPz2q31_ok-blzVgrJYPOQ-g09fxnQTWRLUIsJkc5Xita2MGCtSztA2dlrfoxQlbii2yszVHzjLKVuXGm6Mz_9eKGl7TTh1TMqaQN9TiZOunA0bLIhegKdpygyDLw13kozCD2vmPj4f_3coWagpKhaH2t-iQf1oTjZKWUE', 'Environmental Deck — Architectural Canopy &amp; Private Pods')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Architectural Canopy Pods" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj50rCQXPiwjC51Xgqvc2DvBzpyJ3FJLyM8cWVdVpnglChexJcsF-uuycDFGKAK1EQ6pBGmUtHxThMD7wt8a85b4StZ9qXDJTf0gMSOcqpj8QpwraeFa0JHZj2wB5Q8BqTPVH-l7qt3tZ_4K4AmGgRz-I5-xABqMCHczpG2DN_3e2sMgu2DvaETpFlyHnuqUbQAs0GY6LmM4wGzG2ajz8EYSLtw7Cqq4I9_pGt0TSzk10O-WNFxEYa77BTXtkuMEgH8bQ">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Bioclimatic Canopy &amp; Focus Pods</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+<!-- Image 17 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuC-4htsdio-U_t6S3ImcHIhn9hins5LYE39JnxWT1OvcMp1b6X5gG4CXW7vMXrruklsUC3BIbkyusfi5TRl29UtIL1p8D4IT4HGn5t2fv0rZule3oLyyQStlyipsAsvVLlhuHhjhbjGfZ0y51xjfj9teARPn4LcoK_GNcnxhFR5kCeEcDmdTLOVghwgp-bw6o7z0zzfcTFqTvnUL_woh1-bSN7hr6e_J6mqZflRCmPiIqWNuskYl2SISJOq1sFd6-bqqs8', 'Environmental Deck — Water Lounge &amp; Native Botanical Groves')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Water Garden and Seating" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpBW8alt4KyLb2noVgR85e8VnZP8UGa7dKSh43CKYUMvu45K5368yabTYVA9kvprWHRu5lWGXCKn0nFr5MWr__wBlhk3BrL2MJVQu7o14cQqhMm9jftQ0gbPSAdmQhBH3MD6LcM4oF9i_uQeARSqS0BRyt7BCQmIu3TbPZzmIrOlqSKQEPq3Neice4MIGKpVPfuAFxNrWSPRAPECsV2aLjny4FxISXRxKLGfqP0cxvilzDiaw9i32JG97xUjRMqdcTZeA">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Water Garden &amp; Palm Promenade</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+<!-- Image 18 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDQWnz5yKLP4kQqSjj9dsqZwxeHdui64Ibhc_CPSC0bFqyGPJaBeX4rcq9v4Qd52cAGJQ_7Y42abQOGlvoVxUenVVs70D-RFSZbtg4uQz20QbtPWw7DYdSBpAuazgO0au73aEIrxleZsYpmsGjCzLmyQhHEzWw3eBxKeFJnR-BH080-TottB0eT_XicrnCXTvGQWy5G1CYqqJGdYeaLy6qgr1mqHJDtsCEJak3wdkDQ7IQP7BPOiF2xsXU_2snLqnrMOTI', 'Environmental Deck — Shaded Terraces &amp; Pod Desks')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Shaded Terraces" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQQNSkLJRR-LVcHpV66BybeKqg5GQCFA8aY-crv0QormzqbmLm1pxgJj8ixWT8ZFsBUAFcWOAWvZ4MHD5fzoFtHLOywzsbRL682b80u-dHH3f3FDzTT6qrwYBGHQOs1IoN_y3Ooug33SLnokSjQ27MkFmbkdKnj6AaXR2MYCppET1wNA8p0AzhGtmNaOODb800FO0SrNnFipnlwvXZ0nPW88E-8IvN4qYO-nUg8Ots1tI_OHkcvnHUQEfeCquNkcVQLOI">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Biophilic Terraces &amp; Meeting Gazebos</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+<!-- Image 19 -->
+<div class="cursor-pointer group flex flex-col" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuCboRdEm4LG4-dRFwUA6xoL5Je8mXXJ2d7_xK_sIrN1AgmqMTGbXtVddC583DYfElMBVJJCMnC1sfkVp0KWbU0nv5Gv0Kr--0jECub9XeuJLmb-bzvC1J53d1tvGe7Mh01KBcbuJO6aHjTkXPGRGVY2bG_CM9b_Wwuj9UObYxYLOx9tRPM1agMWlGyCFQUeLJKsZ7epQ6Zak_oeXL-4Q12qQIk1EJU3zhZ2PynfUgjB90mdVwD-KSoOwqt_69qWwMUbf0E', 'Environmental Deck — Panoramic Deck &amp; Social Mezzanine')">
+<div class="w-full bg-[#161616] overflow-hidden aspect-[16/9.2] border border-border-subtle">
+<img alt="Panoramic Deck" class="gallery-img w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIiIVQDIIdCt86yKu9CosK7alBIDk84bGb0GvM7dsjKu_cmv9eJA22HkxwJus5BuoSs5FJqfoxakZcid8_UnFNLEypEXUwYtKFbiDcSCtipSeKUrVie2E8i-EvhE01ahTOtoOQL7QQfHN4uaA6dOdMsFpzBg0xGRpIKxw5PAjW7sZ-dUcl6vxeAewuQZcjujydkSP2lKJaF2hhqzA2mFX5H3qJKYLkk1epipb24D2wGtXkRf2umFTPW11mtJzmklzZoLc">
+</div>
+<div class="pt-2.5 flex items-center justify-between text-[11px] text-secondary font-light">
+<span class="uppercase tracking-[0.18em]">Podium Viewpoint &amp; Outdoor Cabanas</span>
+<span class="material-symbols-outlined text-[16px] group-hover:text-primary transition-colors">open_in_full</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECTION 6: ENGINEERING SPECIFICATIONS (CLEAN 2-COL EDITORIAL) -->
+<section class="w-full px-6 py-20 bg-surface border-b border-border-hairline" id="specifications">
+<div class="max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">05 / Technical Standard</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-8 tracking-wide">
+          Engineering Specifications
+        </h2>
+<div class="flex flex-col divide-y divide-border-hairline">
+<div class="py-5 flex flex-col space-y-1">
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/60 font-light">Power &amp; Redundancy</span>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-cinzel text-[19px] sm:text-[21px] text-[#F7F5F0] font-normal tracking-wide">2 × 500 KVA DG Backup</span>
+<span class="text-[12px] text-secondary font-light">100% Synchronized</span>
+</div>
+</div>
+<div class="py-5 flex flex-col space-y-1">
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/60 font-light">Fire Safety Systems</span>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-cinzel text-[19px] sm:text-[21px] text-[#F7F5F0] font-normal tracking-wide">275 KL Capacity</span>
+<span class="text-[12px] text-secondary font-light">Dedicated Fire Sump</span>
+</div>
+</div>
+<div class="py-5 flex flex-col space-y-1">
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/60 font-light">Ecological Infrastructure</span>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-cinzel text-[19px] sm:text-[21px] text-[#F7F5F0] font-normal tracking-wide">Zero-Discharge STP</span>
+<span class="text-[12px] text-secondary font-light">Rainwater Harvesting</span>
+</div>
+</div>
+<div class="py-5 flex flex-col space-y-1">
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/60 font-light">Vertical Mobility</span>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-cinzel text-[19px] sm:text-[21px] text-[#F7F5F0] font-normal tracking-wide">High-Speed Lifts</span>
+<span class="text-[12px] text-secondary font-light">Service &amp; Passenger</span>
+</div>
+</div>
+<div class="py-5 flex flex-col space-y-1">
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/60 font-light">Grand Entrance Architecture</span>
+<div class="flex justify-between items-baseline pt-1">
+<span class="font-cinzel text-[19px] sm:text-[21px] text-[#F7F5F0] font-normal tracking-wide">3.0m Finished Clear</span>
+<span class="text-[12px] text-secondary font-light">Double-Height Lobby</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECTION 7: ARCHITECTURAL LAYOUTS & FLOOR TOPOLOGIES (DARK SLATE MATTING) -->
+<section class="w-full px-6 py-20 bg-surface-dim border-b border-border-hairline" id="floorplans">
+<div class="max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">06 / Floor Topologies</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-3 tracking-wide">
+    Architectural Layouts
+  </h2>
+<p class="font-sans text-[14px] leading-relaxed text-secondary font-light mb-8">
+    Each floorplate is precisely subdivided into four self-contained office quadrants configured around a central vertical transit core.
+  </p>
+<!-- Dark Tabs -->
+<div class="flex border-b border-border-hairline mb-6 overflow-x-auto no-scrollbar">
+<button class="pb-3 pr-5 text-[11px] uppercase tracking-[0.2em] font-light border-b-2 border-transparent text-secondary/70 hover:text-primary transition-all whitespace-nowrap" id="tab-plan-1" onclick="switchPlan(1)">
+      Layout 01 · 21,437 SFT
+    </button>
+<button class="pb-3 px-5 text-[11px] uppercase tracking-[0.2em] font-medium border-b-2 border-accent-champagne text-accent-champagne transition-all whitespace-nowrap" id="tab-plan-2" onclick="switchPlan(2)">
+      Layout 02 · 22,801 SFT
+    </button>
+<button class="pb-3 pl-5 text-[11px] uppercase tracking-[0.2em] font-light border-b-2 border-transparent text-secondary/70 hover:text-primary transition-all whitespace-nowrap" id="tab-plan-3" onclick="switchPlan(3)">
+      Layout 03 · 22,771 SFT
+    </button>
+</div>
+<!-- Dark Slate Matting Container -->
+<div class="w-full bg-[#161616] border border-border-subtle p-3 sm:p-5 flex flex-col space-y-4">
+<!-- Plan 1: IMAGE_3 -->
+<div class="flex flex-col space-y-3 hidden" id="plan-view-1">
+<div class="relative bg-[#111111] border border-border-subtle overflow-hidden cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuCIT5ZTK-Coj3CLncvhdjwzsygG3NsdAGp7_d9Kk5irlI-LP2hIyMMNiHmZLGT3XoT9Vf59m8px5oqd6Hswn96E-CmMUsDGo5ZVcNGMILT6FIReQP1MHztM_1t49d01CgMlgrih5U_gjY7tHDGu5p9rM6vYSvCZKddOBSwiYoVXFeBfFodVzp6Q_1doiaUC3Xibh9HYIyZqtscIua8Lo9vntVu7BlMC7d_7Wwo_AnhbhQ2dFAz4oEyDQTM2AgR1JTMbYjo', 'Typical Office Floor Plan 01 — 4175, 3757, 6631, 6866 Sq.Ft.')">
+<img alt="Floor Plan 01 - Subdivided Quadrants" class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtuGmq3-iGVwQhH5kM5P1QmfBKyy_Yp86u2tzFPvbgORm217ZKCTjpSajBtdJYiWDzi8jGuTxYXG1-ckHFYwh3lFEKP0IxWa_U6LzDa2l4bThY8UDEv_yC23McFShDo3HUm4JLJHL6sEdNlLYoiyd_v1VJ_4fyCZcdfuGS0CLLSV65fTuZ_4slExlCS7BmXWWoTDr5tAoe6wtWC7ad5v3TDGZd2v2SFejHSQgifasHLuY61LKdghDibFo9Vgc-c9-LcxY">
+<div class="absolute bottom-2.5 right-2.5 bg-[#0B0B0B]/85 backdrop-blur-md text-[#F7F5F0] border border-white/10 text-[9px] uppercase tracking-[0.2em] px-2.5 py-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span>
+<span class="">Inspect Full Resolution</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-secondary pt-1 font-light">
+<span class="font-serif text-[#F7F5F0]">Plate A: 4 Self-Contained Quadrants</span>
+<span class="uppercase tracking-[0.16em] text-accent-champagne/90">Core: ~76% Usable</span>
+</div>
+<!-- Quadrant Breakdown Matrix -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-border-hairline text-[11px]">
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-01</span>
+<span class="font-medium text-[#F7F5F0]">6,631 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-02</span>
+<span class="font-medium text-[#F7F5F0]">6,866 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-03</span>
+<span class="font-medium text-[#F7F5F0]">3,757 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-04</span>
+<span class="font-medium text-[#F7F5F0]">4,175 Sq.Ft.</span>
+</div>
+</div>
+</div>
+<!-- Plan 2: IMAGE_4 -->
+<div class="flex flex-col space-y-3" id="plan-view-2">
+<div class="relative bg-[#111111] border border-border-subtle overflow-hidden cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuDBAgzG5rFNCZ80XnkBbTP1INxdpl5CFMKFBGdk6jBzrf-qJIUfMOOnV8FMoPxmHxeCxf89BPKBu5RTCZEljqvpfKb0hMhROFd_9tiRy0LVoVlEq9_dHnbzrEy6c5xceRzswNIHmdgs-35IYK9vPaPtm76x-Rqq3Ofs55OiZ9-yOyv9-tR3fvIYp7gruJC8NZpeGv4eRjATZxMrG6hsu7KffbZqKdx8LBlADgy9Ey9Ws1YAU7h-siBMsnbf-sdKxQQhudo', 'Typical Office Floor Plan 02 — 4556, 4114, 6949, 7182 Sq.Ft.')">
+<img alt="Floor Plan 02 - Subdivided Quadrants" class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAulPEq90bLd_-2q-pPvyhTP8sgB_4y3k7I8mj-_he9HWX5qCkGv5wIzEHZDgeU5mWf7Fkzm9xWVKI9df-TSN2pUfY3pceEAO1kNoAKWnMjR4GNH8aj2JYKDSuEgf70GTE9keQ2BILtvM7JjdSnBuVJn8fk7cZl4GJMzQf7NdKL-kmW2FHLvVwEelI8IKNIcQggRJr4IsGlIfcykZE-bmt1G-i6cdZxrZV44z3kn9Yj6IxwdX3I-rQccHwnEwHLBfPExxA">
+<div class="absolute bottom-2.5 right-2.5 bg-[#0B0B0B]/85 backdrop-blur-md text-[#F7F5F0] border border-white/10 text-[9px] uppercase tracking-[0.2em] px-2.5 py-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span>
+<span class="">Inspect Full Resolution</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-secondary pt-1 font-light">
+<span class="font-serif text-[#F7F5F0]">Plate B: Extended Span Floorplate</span>
+<span class="uppercase tracking-[0.16em] text-accent-champagne/90">Core: ~78% Usable</span>
+</div>
+<!-- Quadrant Breakdown Matrix -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-border-hairline text-[11px]">
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-01</span>
+<span class="font-medium text-[#F7F5F0]">6,949 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-02</span>
+<span class="font-medium text-[#F7F5F0]">7,182 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-03</span>
+<span class="font-medium text-[#F7F5F0]">4,114 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-04</span>
+<span class="font-medium text-[#F7F5F0]">4,556 Sq.Ft.</span>
+</div>
+</div>
+</div>
+<!-- Plan 3: IMAGE_5 -->
+<div class="flex flex-col space-y-3 hidden" id="plan-view-3">
+<div class="relative bg-[#111111] border border-border-subtle overflow-hidden cursor-pointer group" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuAGNoqSs9IpwIlDpRbQiV4erX259tK1WctdWUF-pcSOEjHquWnpIyXbnuSAt5rZQ7Lrx0Xmdhgm6EiMDEbz55rYAtPeNBs32q1WwIKl-jAwm0mBdItmUfN_1B89yNiZ6l9CZI8bN_Ihv3lkokV2jB_ariVwsPFxqAtbptB0r9fZM_KWXow5oscfrHVymBekcm6JDFdeYB4QA2hBu4wNr2tycfeKVxaOYs0AW4u5-uz1c5YVuwhjCJhZZGgVez9lqncL8PM', 'Typical Office Floor Plan 03 — 4549, 4114, 6925, 7183 Sq.Ft.')">
+<img alt="Floor Plan 03 - Subdivided Quadrants" class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqsQH7KoVe4Y9LCBGsmltYRqb-BFDKXIObC1sAC_bfbRpEq-dxWmP7bIz7oGoF6Xxv4NN-l3d_yxCqhgCtC6V5_NTId6M3LJS8zjOIehned0ts1WlSY9i-z2dN428okgeR1hfhDNZ2ikGDvK_oR-x96ikMqbNXNqrA3SM9xRNpPkPW1jmwkqkjBg7GFbqXau4UxDhFds3HCANbRurP_-GYU3HIFoDbsFROnsxrk3EZJKyk5np_EzkM9Wg8-V4YvSx7bI">
+<div class="absolute bottom-2.5 right-2.5 bg-[#0B0B0B]/85 backdrop-blur-md text-[#F7F5F0] border border-white/10 text-[9px] uppercase tracking-[0.2em] px-2.5 py-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]">zoom_in</span>
+<span class="">Inspect Full Resolution</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-secondary pt-1 font-light">
+<span class="font-serif text-[#F7F5F0]">Plate C: High-Efficiency Core</span>
+<span class="uppercase tracking-[0.16em] text-accent-champagne/90">Core: ~78% Usable</span>
+</div>
+<!-- Quadrant Breakdown Matrix -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-border-hairline text-[11px]">
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-01</span>
+<span class="font-medium text-[#F7F5F0]">6,925 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-02</span>
+<span class="font-medium text-[#F7F5F0]">7,183 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-03</span>
+<span class="font-medium text-[#F7F5F0]">4,114 Sq.Ft.</span>
+</div>
+<div class="py-2 px-3 bg-[#1C1C1C] border border-border-hairline flex justify-between items-center">
+<span class="text-secondary font-light">Office-04</span>
+<span class="font-medium text-[#F7F5F0]">4,549 Sq.Ft.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Layout Details -->
+<div class="mt-6 pt-5 border-t border-border-hairline flex flex-col space-y-2.5 text-[12px] text-secondary font-light">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-champagne">check_circle</span>
+<span class=""><strong class="font-medium text-[#F7F5F0]">3.0-meter Wide Central Lift Lobby</strong> with dual egress corridors</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-champagne">check_circle</span>
+<span class=""><strong class="font-medium text-[#F7F5F0]">Independent G &amp; L Toilet clusters</strong> per quadrant + wet column provision</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-accent-champagne">check_circle</span>
+<span class=""><strong class="font-medium text-[#F7F5F0]">Synchronized dual fire escape staircases</strong> and dedicated refuge zone</span>
+</div>
+</div>
+<p class="text-[11px] text-secondary/60 font-light pt-4">
+    Artist’s impression and architectural drawings — areas and floor layouts are indicative and subject to definitive commercial agreements.
+  </p>
+</div>
+</section>
+<!-- 8. SECTION 8: PRIVATE BRIEFING & QUALIFICATION FORM -->
+<section class="w-full px-6 py-20 bg-surface" id="section-07">
+<div class="max-w-xl mx-auto flex flex-col">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 mb-3 font-light">07 / Private Briefing</span>
+<h2 class="font-cinzel text-[26px] sm:text-[32px] leading-snug font-normal text-[#F7F5F0] mb-3 tracking-wide">
+          Find the right space for your requirement.
+        </h2>
+<p class="font-sans text-[14px] text-secondary font-light leading-relaxed mb-10">Register your requirements with KONU Advisory to discuss commercial space allocation, floorplate matrices, and schedule an exclusive site visit.</p>
+<!-- Editorial Dark Minimal Form -->
+<form action="thank-you.html" class="flex flex-col space-y-6" id="enquiry-form" novalidate><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Full Name *</label><input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="full-name-input" minlength="2" placeholder="e.g. Rahul Reddy" required="" type="text"><span class="text-[11px] text-red-400 font-light hidden pt-1" id="name-error-msg">Please enter your full name.</span></div><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors"><div class="flex items-center justify-between"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Direct Phone Number (10 Digits) *</label><span class="text-[8.5px] text-secondary/50 font-light tracking-widest uppercase">10 Digits Only</span></div><input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="phone-input" inputmode="numeric" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="e.g. 9876543210" required="" type="tel"><span class="text-[11px] text-red-400 font-light hidden pt-1" id="phone-error-msg">Please enter a valid 10-digit mobile number.</span></div><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Official Email *</label><input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="email-input" placeholder="name@company.com" required="" type="email"><span class="text-[11px] text-red-400 font-light hidden pt-1" id="email-error-msg">Please enter a valid email address (e.g. name@company.com).</span></div><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Requirement Type</label><select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light"><option class="bg-[#161616]">Grade-A Commercial Office</option><option class="bg-[#161616]">Prime High-Street Retail (G+1)</option><option class="bg-[#161616]">Institutional Investment Portfolio</option></select></div><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Target Floor Area</label><select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light"><option class="bg-[#161616]">3,757 – 7,183 Sq.Ft. (Subdivided)</option><option class="bg-[#161616]">21,427 – 22,958 Sq.Ft. (Whole Floor)</option><option class="bg-[#161616]">Multiple Contiguous Floors (45,000+ Sq.Ft.)</option><option class="bg-[#161616]">Custom Allocation Requirement</option></select></div><div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2"><label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Timeline</label><select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light"><option class="bg-[#161616]">Immediate / Ready to Transact</option><option class="bg-[#161616]">3 to 6 Months</option><option class="bg-[#161616]">Longer Term Planning</option></select></div><div class="w-full pt-2"><button class="w-full h-12 bg-[#F7F5F0] text-[#0B0B0B] hover:bg-white uppercase font-medium text-[10.5px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.24em] active:scale-[0.99] transition-all truncate px-4" id="submit-btn" type="submit">Submit Requirements</button></div><div class="hidden" id="form-confirm"></div></form>
+<!-- Peak Conversion Banner -->
+<div class="mt-16 pt-12 border-t border-border-hairline flex flex-col items-center text-center space-y-4">
+<span class="text-[10px] uppercase tracking-[0.28em] text-accent-champagne/80 font-light">Private Tour</span>
+<h3 class="font-cinzel text-[22px] sm:text-[26px] text-[#F7F5F0] font-normal tracking-wide">
+            See Cybercity Opus in person on Road No. 45.
+          </h3>
+<p class="text-[13px] text-secondary font-light max-w-xs leading-relaxed">
+            Directly experience the arterial road visibility, ceiling heights, and biophilic deck elevation in Jubilee Hills.
+          </p>
+<a class="inline-flex h-11 px-8 items-center justify-center bg-[#F7F5F0] text-[#0B0B0B] text-[11px] uppercase tracking-[0.22em] font-medium hover:bg-white transition-colors" href="#section-07" onclick="const target = document.querySelector('#section-07'); if (target) { target.scrollIntoView({ behavior: 'smooth' }); }">
+            Enquire Now
+          </a>
+</div>
+<!-- KONU & WhatsApp direct link -->
+<div class="mt-12 pt-8 border-t border-border-hairline flex flex-col items-center text-center space-y-3">
+<div class="flex items-center space-x-2 text-[10px] uppercase tracking-[0.24em] text-secondary/70 font-light">
+<span class="">Mandate Advisor</span>
+<span class="">·</span>
+<span class="text-[#F7F5F0] font-medium">KONU Real Estate Advisory</span>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+<!-- LIGHTBOX MODAL (HIGH RES IMAGE VIEWER) -->
+<div class="fixed inset-0 z-50 bg-[#070707]/98 hidden flex flex-col justify-between p-5 sm:p-8 backdrop-blur-md" id="lightbox-modal">
+<div class="flex items-center justify-between text-white border-b border-border-hairline pb-4">
+<span class="text-xs uppercase tracking-[0.22em] text-accent-champagne/90 font-light max-w-[80%] truncate" id="lightbox-caption">Architectural View</span>
+<button class="text-white hover:text-accent-champagne p-2" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-[28px]">close</span>
+</button>
+</div>
+<div class="flex-1 flex items-center justify-center py-4">
+<img alt="Enlarged Architectural Rendering" class="max-w-full max-h-[78vh] object-contain shadow-2xl" id="lightbox-img" src="">
+</div>
+<div class="text-center text-[10px] uppercase tracking-[0.24em] text-secondary/50 pb-2 font-light">
+      Cybercity Opus · Jubilee Hills Renderings &amp; Layouts
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="w-full bg-[#070707] text-primary pt-16 pb-12 px-6 pb-safe border-t border-border-hairline">
+<div class="max-w-xl mx-auto flex flex-col space-y-8">
+<div class="flex flex-col space-y-2">
+<span class="font-cinzel text-[20px] tracking-[0.2em] uppercase text-[#F7F5F0] font-medium">Cybercity Opus</span>
+<span class="text-[10px] uppercase tracking-[0.24em] text-secondary/70 font-light">Road No. 45, Jubilee Hills, Hyderabad</span>
+</div>
+<p class="text-[13px] text-secondary leading-relaxed font-light">
+        A master commercial development commissioned for high-calibre businesses, flagship high-street luxury retail, and global investment portfolios.
+      </p>
+<div class="text-[10px] uppercase tracking-[0.22em] text-secondary/50 space-y-1 font-light">
+<p class="">TS RERA Registration No: P02500004589</p>
+<p class="">© 2025 CYBERCITY OPUS HOLDINGS. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="pt-2 text-[9px] text-secondary/40 leading-relaxed font-light border-t border-border-hairline">
+        Disclaimer: Visualizations, conceptual 3D renders, and maps are artist impressions for visualization purposes only. Final specifications and configurations are governed by definitive agreements.
+      </div>
+</div>
+</footer>
+<!-- SCRIPT -->
+<script>
+    // Navigation drawer
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    function toggleMenu(open) {
+      if (open) {
+        mobileMenu.classList.remove('translate-x-full');
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+      }
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', () => toggleMenu(true));
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+    menuLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+
+    // Interactive Floor Plan Switcher
+    function switchPlan(planIndex) {
+      const views = [
+        document.getElementById('plan-view-1'),
+        document.getElementById('plan-view-2'),
+        document.getElementById('plan-view-3')
+      ];
+      const tabs = [
+        document.getElementById('tab-plan-1'),
+        document.getElementById('tab-plan-2'),
+        document.getElementById('tab-plan-3')
+      ];
+
+      views.forEach((v, idx) => {
+        if (idx === planIndex - 1) {
+          v.classList.remove('hidden');
+        } else {
+          v.classList.add('hidden');
+        }
+      });
+
+      tabs.forEach((tab, idx) => {
+        if (idx === planIndex - 1) {
+          tab.className = 'pb-3 ' + (idx === 0 ? 'pr-5 ' : (idx === 2 ? 'pl-5 ' : 'px-5 ')) + 'text-[11px] uppercase tracking-[0.2em] font-medium border-b-2 border-accent-champagne text-accent-champagne transition-all whitespace-nowrap';
+        } else {
+          tab.className = 'pb-3 ' + (idx === 0 ? 'pr-5 ' : (idx === 2 ? 'pl-5 ' : 'px-5 ')) + 'text-[11px] uppercase tracking-[0.2em] font-light border-b-2 border-transparent text-secondary/70 hover:text-primary transition-all whitespace-nowrap';
+        }
+      });
+    }
+
+    // Lightbox modal for high-res images and floor plans
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      if (modal && img && cap) {
+        img.src = src;
+        cap.innerText = caption || 'Architectural View';
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+<script src="brochure.js"></script>
+<script class="">document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const targetId = this.getAttribute('href'); if (targetId && targetId !== '#') { const targetEl = document.querySelector(targetId); if (targetEl) { e.preventDefault(); targetEl.scrollIntoView({ behavior: 'smooth' }); if (history.pushState) { history.pushState(null, null, targetId); } } } }); });</script></body></html>
