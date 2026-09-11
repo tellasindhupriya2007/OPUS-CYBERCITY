@@ -1,0 +1,8 @@
+{
+  "name": "Cybercity Opus",
+  "description": "Commercial property development featuring Grade-A office suites and high-street retail spaces on Road No. 45, Jubilee Hills, Hyderabad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
