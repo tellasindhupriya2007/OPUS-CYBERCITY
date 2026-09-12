@@ -1,0 +1,24 @@
+{
+  "summary": "Comprehensive SEO/AEO/GEO validation of the Cybercity Opus static landing page. Ran 26 pytest cases covering: (1) compiled Tailwind CSS replaces CDN, (2) canonical + og:url point to opuscybercity-beige.vercel.app with no bare-domain leaks, (3) viewport meta has no maximum-scale / user-scalable=no, (4) robots.txt lists GPTBot / PerplexityBot / ClaudeBot / Google-Extended / OAI-SearchBot and correct Sitemap line, (5) sitemap.xml is valid XML with all -beige <loc>, (6) llms.txt contains required strings, (7) all 4 self-hosted images serve as image/jpeg and are referenced in HTML with no lh3.googleusercontent.com hotlinks remaining, (8) JSON-LD parses cleanly and includes Organization+WebSite+BreadcrumbList+RealEstateListing+FAQPage with full enrichment (address, geo 17.4239/78.4106, images, RERA identifier P02500004589, AggregateOffer offerCount 3 INR, org sameAs Instagram, FAQ >=12 with price-per/possession/freehold entries, 3-item breadcrumb). All 26 backend tests PASSED. Frontend Playwright checks at 1440x900 and 390x844: nav lockup (nav-konu-logo, nav-cybercity-logo, nav-project-address) visible, H1 shows OPUS + CYBERCITY, hero-location-badge shows 'ROAD NO. 45' and 'JUBILEE HILLS', ZERO console errors, ZERO horizontal overflow (client width == scroll width) on both breakpoints.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "HTML source", "issues": ["Floor-plan image src/onclick paths use relative 'public/site/...' while the map image uses absolute '/public/site/location-map.jpg'. Both resolve correctly at the root path, but inconsistency could break if the page is ever mounted at a subpath. Minor / cosmetic - not blocking."]}
+    ]
+  },
+  "test_report_links": ["/app/backend/tests/test_seo_static.py", "/app/test_reports/pytest/pytest_results.xml"],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Consider normalising all self-hosted image paths in index.html to start with a leading slash for consistency (map uses '/public/site/...', floor-plans use 'public/site/...').",
+    "server.js has no cache headers for /dist/tailwind.css or /public/site/*.jpg - vercel.json is expected to handle prod caching but for local parity express.static could set immutable/max-age for hashed assets in future."
+  ],
+  "updated_files": ["/app/backend/tests/test_seo_static.py"],
+  "success_rate": {"backend": "100% (26/26)", "frontend": "100%"},
+  "test_credentials": "N/A - static site, no auth",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Static express site on :3000. Pytest file at /app/backend/tests/test_seo_static.py covers all SEO/AEO/GEO acceptance criteria. If HTML/CSS changes, rerun: pytest /app/backend/tests/test_seo_static.py -v. If Tailwind classes change, rebuild with: cd /app && npx tailwindcss -i ./src/tailwind-input.css -o ./dist/tailwind.css --minify. Server started with: cd /app && node server.js &. All JSON-LD (Organization, WebSite, BreadcrumbList, RealEstateListing, FAQPage) is embedded in a single <script type='application/ld+json'> block inside a top-level @graph. FAQ currently has >=12 entries; breadcrumb has 3 items."
+}
