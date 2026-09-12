@@ -1,3 +1,10 @@
 .DS_Store
 *.log
 node_modules/
+.env
+.env.*
+*.env
+credentials.json
+*.pem
+*.key
+.credentials
