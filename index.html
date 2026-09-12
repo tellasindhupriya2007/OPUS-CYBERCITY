@@ -232,12 +232,14 @@
   <!-- NAVIGATION HEADER -->
   <header class="fixed top-0 left-0 right-0 z-40 bg-[#0B0B0B]/85 backdrop-blur-xl border-b border-border-hairline pt-safe">
     <div class="h-16 px-4 sm:px-5 flex items-center justify-between gap-2">
-      <a class="flex flex-col tracking-tight group min-w-0 flex-shrink" href="#">
-        <span class="font-cinzel text-[13px] sm:text-[16px] font-semibold tracking-[0.16em] sm:tracking-[0.24em] uppercase text-primary truncate">Cybercity Opus</span>
-        <span class="text-[8.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.28em] text-secondary/70 uppercase font-light truncate">Road No. 45 · Jubilee Hills</span>
+      <a data-testid="nav-brand-lockup" class="flex items-center gap-2 sm:gap-3 min-w-0 flex-shrink group" href="#">
+        <img data-testid="nav-konu-logo" alt="KONU Real Estate Advisory" class="h-7 sm:h-9 w-auto object-contain flex-shrink-0" src="public/konu-logo.png">
+        <span class="text-secondary/60 text-lg sm:text-xl font-light select-none flex-shrink-0">—</span>
+        <img data-testid="nav-cybercity-logo" alt="Cybercity Builders & Developers" class="h-7 sm:h-9 w-auto object-contain bg-white rounded-sm p-0.5 flex-shrink-0" src="public/cybercity-builders-logo.png">
+        <span class="text-secondary/60 text-lg sm:text-xl font-light select-none flex-shrink-0 hidden sm:inline">—</span>
+        <span data-testid="nav-project-address" class="hidden sm:inline font-sans text-[10px] sm:text-[12px] font-extrabold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-primary truncate">Cybercity Opus Jubilee Hills Road No 45</span>
       </a>
       <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-        <img alt="KONU Real Estate Advisory" class="h-7 sm:h-9 w-auto object-contain mr-1 sm:mr-2" src="public/konu-logo.png">
         <a id="header-enquire-btn" class="cta-shadow-zoom h-8 sm:h-9 px-3 sm:px-5 inline-flex items-center justify-center bg-[#F7F5F0] text-[#0B0B0B] text-[9.5px] sm:text-[11px] font-medium tracking-[0.14em] sm:tracking-[0.2em] uppercase hover:bg-white active:scale-95 transition-all whitespace-nowrap" href="#section-07">
           Enquire Now
         </a>
@@ -245,6 +247,10 @@
           <span class="material-symbols-outlined text-[24px]">menu</span>
         </button>
       </div>
+    </div>
+    <!-- Mobile-only address line (extra bold) -->
+    <div class="sm:hidden px-4 pb-2 -mt-1">
+      <span data-testid="nav-project-address-mobile" class="block font-sans text-[9.5px] font-extrabold tracking-[0.14em] uppercase text-primary truncate">Cybercity Opus · Jubilee Hills · Road No 45</span>
     </div>
   </header>
 
