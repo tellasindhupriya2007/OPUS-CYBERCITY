@@ -1047,7 +1047,7 @@
           <!-- Full Name -->
           <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors">
             <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Full Name *</label>
-            <input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="full-name-input" minlength="2" placeholder="e.g. Rahul Reddy" required type="text">
+            <input autocomplete="name" class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="full-name-input" minlength="2" name="full-name" placeholder="e.g. Rahul Reddy" required type="text">
             <span class="text-[11px] text-red-400 font-light hidden pt-1" id="name-error-msg">Please enter your full name.</span>
           </div>
 
@@ -1057,61 +1057,15 @@
               <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Direct Phone Number (10 Digits) *</label>
               <span class="text-[8.5px] text-secondary/50 font-light tracking-widest uppercase">10 Digits Only</span>
             </div>
-            <input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="phone-input" inputmode="numeric" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="e.g. 9876543210" required type="tel">
+            <input autocomplete="tel-national" class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="phone-input" inputmode="numeric" maxlength="10" minlength="10" name="phone" pattern="[0-9]{10}" placeholder="e.g. 9876543210" required type="tel">
             <span class="text-[11px] text-red-400 font-light hidden pt-1" id="phone-error-msg">Please enter a valid 10-digit mobile number.</span>
           </div>
 
           <!-- Official Email -->
           <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors">
             <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Official Email *</label>
-            <input class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="email-input" placeholder="name@company.com" required type="email">
+            <input autocomplete="email" class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="email-input" name="email" placeholder="name@company.com" required type="email">
             <span class="text-[11px] text-red-400 font-light hidden pt-1" id="email-error-msg">Please enter a valid email address (e.g. name@company.com).</span>
-          </div>
-
-          <!-- Requirement Type -->
-          <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2">
-            <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Requirement Type</label>
-            <select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light" id="requirement-type-select">
-              <option class="bg-[#161616]">Grade-A Commercial Office</option>
-              <option class="bg-[#161616]">Prime High-Street Retail (G+1)</option>
-              <option class="bg-[#161616]">Institutional Investment Portfolio</option>
-              <option class="bg-[#161616]">Other Commercial Requirement</option>
-            </select>
-          </div>
-
-          <!-- Purchase Purpose -->
-          <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2">
-            <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Purchase Purpose</label>
-            <select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light" id="purchase-purpose-select">
-              <option class="bg-[#161616]">Self-Use / Corporate End-Use</option>
-              <option class="bg-[#161616]">Business Expansion</option>
-              <option class="bg-[#161616]">Commercial Property Investment</option>
-              <option class="bg-[#161616]">Portfolio Acquisition</option>
-              <option class="bg-[#161616]">Other Purpose</option>
-            </select>
-          </div>
-
-          <!-- Target Floor Area -->
-          <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2">
-            <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Target Floor Area</label>
-            <select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light" id="floor-area-select">
-              <option class="bg-[#161616]">3,757 – 7,183 Sq.Ft. (Subdivided Suites)</option>
-              <option class="bg-[#161616]">21,427 – 22,958 Sq.Ft. (Consolidated Whole Floor)</option>
-              <option class="bg-[#161616]">Multiple Contiguous Floors (45,000+ Sq.Ft.)</option>
-              <option class="bg-[#161616]">Custom Allocation Requirement</option>
-            </select>
-          </div>
-
-          <!-- Purchase Timeline -->
-          <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2">
-            <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Purchase Timeline</label>
-            <select class="w-full bg-[#0B0B0B] border-none p-0 text-[14px] text-[#F7F5F0] focus:ring-0 font-light" id="timeline-select">
-              <option class="bg-[#161616]">Immediate / Ready to Transact</option>
-              <option class="bg-[#161616]">0 – 3 Months</option>
-              <option class="bg-[#161616]">3 – 6 Months</option>
-              <option class="bg-[#161616]">6 – 12 Months</option>
-              <option class="bg-[#161616]">Exploring Opportunities</option>
-            </select>
           </div>
 
           <div class="w-full pt-2">

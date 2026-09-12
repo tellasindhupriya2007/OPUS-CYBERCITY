@@ -45,11 +45,18 @@ Static HTML/CSS/JS landing page for Cybercity Opus (Grade-A commercial project o
 - **Vercel cache headers:** immutable long-cache on `/dist/*` and `/public/*`.
 - **Testing:** 26/26 backend pytest assertions passed, Playwright frontend checks passed at 1440x900 and 390x844 with zero console errors and zero horizontal overflow.
 
+### 2026-09-12 — Enquiry form simplification
+- Removed all 4 select dropdowns (Requirement Type, Purchase Purpose, Target Floor Area, Purchase Timeline) from `#enquiry-form`; only Full Name / Direct Phone Number / Official Email remain.
+- Added SEO/a11y-friendly attributes: `name` (`full-name`, `phone`, `email`) + `autocomplete` (`name`, `tel-national`, `email`) on the 3 inputs.
+- Testing: 5/5 Playwright checks passed — form structure, input attributes, submit → thank-you.html flow, empty-submit inline validation, and layout regression at 1440x900 + 390x844 (zero console errors, zero overflow).
+
 ## Prioritized Backlog
 
 ### P0 (before paid campaign)
-- Point the site at a real custom domain (not a Vercel subdomain) and re-run a find-replace across canonical / og / JSON-LD / robots.txt / sitemap.xml / llms.txt to that domain.
-- Wire the lead form to a real backend (SendGrid/Resend + a database or Google Sheet) — currently just posts to thank-you.html with nothing captured.
+- **Custom domain swap:** replace `opuscybercity-beige.vercel.app` with `https://cybercityopus.com` everywhere (index.html, robots.txt, sitemap.xml, llms.txt). User confirmed domain `https://cybercityopus.com`. Phone for CTAs: `+91 9100505070` (wa.me/919100505070).
+- **Sticky mobile CTA bar:** Call (tel:+919100505070) · WhatsApp (wa.me/919100505070 pre-filled) · Enquire (#section-07) pinned to bottom on phones only (sm:hidden).
+- **Trust strip under hero:** "Built by Cybercity Builders · 20+ Years · 7,500+ Homes · RERA P02500004589".
+- **Lead backend:** user deferred — wire form to Resend/SendGrid later; destination email TBD.
 
 ### P1
 - Replace the approximate lat/long (17.4239, 78.4106) with the exact building coordinates once confirmed.
