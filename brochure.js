@@ -133,8 +133,52 @@
     submitButton.classList.add('opacity-70', 'cursor-not-allowed');
     submitButton.textContent = 'Submitting...';
 
-    // Proceed to Thank You confirmation page
-    window.location.href = 'thank-you.html';
+    // Prepare form data
+    const formData = {
+      fullName: nameValue,
+      phone: phoneValue,
+      email: emailValue,
+      source: document.getElementById('source-input') ? document.getElementById('source-input').value.trim() : null
+    };
+
+    // Submit to backend API
+    fetch('/api/enquiry', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // Send GTM event
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              event: 'enquiry_submitted',
+              email: emailValue,
+              phone: phoneValue
+            });
+          }
+          // Redirect to thank you page
+          setTimeout(() => {
+            window.location.href = '/thank-you';
+          }, 500);
+        } else {
+          // Show error message
+          alert(data.message || 'Failed to submit enquiry. Please try again.');
+          submitButton.disabled = false;
+          submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+          submitButton.textContent = 'Request Purchase Details';
+        }
+      })
+      .catch(error => {
+        console.error('Enquiry submission error:', error);
+        alert('Failed to submit enquiry. Please check your connection and try again.');
+        submitButton.disabled = false;
+        submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+        submitButton.textContent = 'Request Purchase Details';
+      });
   });
 
 })();

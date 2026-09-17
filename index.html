@@ -1054,7 +1054,7 @@
         </p>
         
         <!-- Enhanced Buyer Lead Form -->
-        <form action="thank-you.html" class="flex flex-col space-y-6" id="enquiry-form" novalidate>
+        <form class="flex flex-col space-y-6" id="enquiry-form" novalidate>
           
           <!-- Full Name -->
           <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors">
@@ -1078,6 +1078,20 @@
             <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Official Email *</label>
             <input autocomplete="email" class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light" id="email-input" name="email" placeholder="name@company.com" required type="email">
             <span class="text-[11px] text-red-400 font-light hidden pt-1" id="email-error-msg">Please enter a valid email address (e.g. name@company.com).</span>
+          </div>
+
+          <!-- Where did you hear about us? (Optional) -->
+          <div class="flex flex-col space-y-1.5 border-b border-border-hairline pb-2 focus-within:border-accent-champagne transition-colors">
+            <label class="text-[9px] uppercase tracking-[0.24em] text-secondary/70">Where did you hear about us?</label>
+            <select class="w-full bg-transparent border-none p-0 text-[15px] text-[#F7F5F0] focus:ring-0 placeholder:text-secondary/30 font-light appearance-none cursor-pointer" id="source-input" name="source">
+              <option value="" class="bg-[#0B0B0B] text-[#F7F5F0]">Select an option...</option>
+              <option value="Google Search" class="bg-[#0B0B0B] text-[#F7F5F0]">Google Search</option>
+              <option value="Social Media" class="bg-[#0B0B0B] text-[#F7F5F0]">Social Media</option>
+              <option value="Real Estate Portal" class="bg-[#0B0B0B] text-[#F7F5F0]">Real Estate Portal</option>
+              <option value="Referral" class="bg-[#0B0B0B] text-[#F7F5F0]">Referral</option>
+              <option value="Direct" class="bg-[#0B0B0B] text-[#F7F5F0]">Direct</option>
+              <option value="Other" class="bg-[#0B0B0B] text-[#F7F5F0]">Other</option>
+            </select>
           </div>
 
           <div class="w-full pt-2">
