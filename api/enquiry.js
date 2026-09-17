@@ -20,10 +20,11 @@ const duplicateCache = new Map();
 const DUPLICATE_WINDOW_MS = 30 * 1000; // 30 seconds
 
 // Rate Limiting Cache: Track submissions per IP address
-// Limit: 5 submissions per hour (3600 seconds) per IP
+// Limit: 50 submissions per hour (3600 seconds) per IP
+// TODO: Change back to 5 before production launch
 const rateLimitCache = new Map();
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-const RATE_LIMIT_MAX_SUBMISSIONS = 5;
+const RATE_LIMIT_MAX_SUBMISSIONS = 50;
 
 /**
  * Generate a hash key for duplicate detection (email + phone)
