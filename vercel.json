@@ -2,6 +2,11 @@
   "cleanUrls": true,
   "buildCommand": "npm run build",
   "outputDirectory": ".",
+  "functions": {
+    "api/enquiry.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/thank-you",
