@@ -63,7 +63,7 @@
   // ------------------------------------------------------------
   // FORM SUBMISSION & STRICT VALIDATION
   // ------------------------------------------------------------
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     let isValid = true;
@@ -133,12 +133,28 @@
     submitButton.classList.add('opacity-70', 'cursor-not-allowed');
     submitButton.textContent = 'Submitting...';
 
+    // Get reCAPTCHA token
+    let recaptchaToken = null;
+    if (window.grecaptcha) {
+      try {
+        recaptchaToken = await window.grecaptcha.execute('RECAPTCHA_SITE_KEY', {
+          action: 'enquiry_submission'
+        });
+      } catch (captchaError) {
+        console.warn('reCAPTCHA token generation failed:', captchaError);
+        // Continue without token - backend has graceful fallback
+      }
+    } else {
+      console.warn('reCAPTCHA not loaded');
+    }
+
     // Prepare form data
     const formData = {
       fullName: nameValue,
       phone: phoneValue,
       email: emailValue,
-      source: document.getElementById('source-input') ? document.getElementById('source-input').value.trim() : null
+      source: document.getElementById('source-input') ? document.getElementById('source-input').value.trim() : null,
+      recaptchaToken: recaptchaToken
     };
 
     // Submit to backend API
