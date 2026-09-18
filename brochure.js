@@ -137,7 +137,7 @@
     let recaptchaToken = null;
     if (window.grecaptcha) {
       try {
-        recaptchaToken = await window.grecaptcha.execute('RECAPTCHA_SITE_KEY', {
+        recaptchaToken = await window.grecaptcha.execute('6LfezMEtAAAAAG2i8gg35ElQvOCa6-8mAAwruLWT', {
           action: 'enquiry_submission'
         });
       } catch (captchaError) {
