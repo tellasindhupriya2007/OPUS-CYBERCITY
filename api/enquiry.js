@@ -8,6 +8,7 @@
  * - ZOHO_REFRESH_TOKEN
  * - ZOHO_API_DOMAIN (optional, defaults to https://www.zohoapis.in)
  * - RECAPTCHA_SECRET_KEY (for reCAPTCHA v3 backend verification)
+ * - CAMPAIGN_NAME (optional, defaults to 'Direct')
  */
 
 // Zoho OAuth Token Cache (in-memory for this serverless instance)
@@ -381,6 +382,9 @@ async function createZohoLead(leadData) {
       const ZOHO_API_DOMAIN = process.env.ZOHO_API_DOMAIN || 'https://www.zohoapis.in';
       const apiUrl = `${ZOHO_API_DOMAIN}/crm/v8/Leads`;
 
+      // Get campaign name from environment, default to 'Direct' if not set
+      const campaignName = process.env.CAMPAIGN_NAME || 'Direct';
+
       const payload = {
         data: [
           {
@@ -388,6 +392,8 @@ async function createZohoLead(leadData) {
             Last_Name: leadData.lastName,
             Phone: leadData.phone,
             Email: leadData.email,
+            // Campaign tracking - scalable for multiple landing pages
+            Campaign_Name: campaignName,
             // Only include Lead_Source if source is provided
             ...(leadData.source && { Lead_Source: leadData.source })
           }
@@ -554,8 +560,11 @@ export default async function handler(req, res) {
     // Increment rate limit counter only on successful submission
     incrementRateLimit(clientIp);
 
+    // Get campaign name for logging
+    const campaignName = process.env.CAMPAIGN_NAME || 'Direct';
+
     // Log successful submission (server-side only)
-    console.log(`[ENQUIRY] New lead created - Name: ${fullName}, Email: ${email}, Phone: ${phone}, IP: ${clientIp}`);
+    console.log(`[ENQUIRY] New lead created - Name: ${fullName}, Email: ${email}, Phone: ${phone}, Campaign: ${campaignName}, IP: ${clientIp}`);
 
     return res.status(200).json({
       success: true,
